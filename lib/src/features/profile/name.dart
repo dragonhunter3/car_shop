@@ -2,7 +2,6 @@ import 'package:car_shop/src/common/constants/global_variables.dart';
 import 'package:car_shop/src/common/widgets/custom_button.dart';
 import 'package:car_shop/src/common/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
-import 'package:car_shop/src/features/profile/profile.dart';
 import 'package:go_router/go_router.dart';
 
 class Name extends StatefulWidget {
@@ -13,11 +12,8 @@ class Name extends StatefulWidget {
 }
 
 class _NameState extends State<Name> {
-  var height, width;
   @override
   Widget build(BuildContext context) {
-    height = MediaQuery.of(context).size.height;
-    width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         title: Text(
