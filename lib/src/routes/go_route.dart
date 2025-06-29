@@ -21,6 +21,7 @@ import 'package:car_shop/src/features/onboarding/onboarding.dart';
 import 'package:car_shop/src/features/order/adress.dart';
 import 'package:car_shop/src/features/order/checkout.dart';
 import 'package:car_shop/src/features/order/thanks.dart';
+import 'package:car_shop/src/features/post.dart';
 import 'package:car_shop/src/features/profile/emil.dart';
 import 'package:car_shop/src/features/profile/name.dart';
 import 'package:car_shop/src/features/profile/password.dart';
@@ -327,6 +328,15 @@ class MyAppRouter {
           child: Password(),
         ),
       ),
+      GoRoute(
+        name: AppRoute.postPage,
+        path: '/${AppRoute.postPage}',
+        pageBuilder: (context, state) => buildPageWithFadeTransition<void>(
+          context: context,
+          state: state,
+          child: TodoScreen(),
+        ),
+      ),
     ],
     errorPageBuilder: (context, state) {
       return const MaterialPage(child: ErrorPage());
@@ -374,4 +384,5 @@ class AppRoute {
   static const String emailPage = "email";
   static const String passwordPage = "password";
   static const String thankPage = "thanks";
+  static const String postPage = "post";
 }
